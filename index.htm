@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JayDev Forums </title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<h1>JayDev Forums</h1>
+<p>Welcome to the forums. I host all my programming projects with there source code here. Feel free to take ideas or
+    just try out any of them. From games, to hacks, to useful apps and even circuitry you will surely find something you like here!
+    <br>
+    <a href="https://gamejolt.com/@JayDev">My main game page____</a>
+    <a href="https://github.com/JayDev87">My Github.</a></p>
+</p>
+<br>
+<input id="searchbar" onkeyup="search()" type="text"
+       name="search" placeholder="Search software.">
+<ol id='list'>
+
+    <li class="forum">
+        | Name/Desc | Language | Time |
+        <a href="https://gamejolt.com/@JayDev">Link to project</a>
+    </li>
+
+</ol>
+<script>
+// JavaScript code
+function search() {
+let input = document.getElementById('searchbar').value
+input=input.toLowerCase();
+let x = document.getElementsByClassName('forum');
+
+for (i = 0; i < x.length; i++) {
+if (!x[i].innerHTML.toLowerCase().includes(input)) {
+x[i].style.display="none";
+}
+else {
+x[i].style.display="list-item";
+}
+}
+}
+</script>
+</body>
+
+
+</html>
